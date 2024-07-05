@@ -46,6 +46,13 @@ function conferirPalpite() {
 
 envioPalpite.addEventListener("click", conferirPalpite);
 
+campoPalpite.addEventListener("keyup", e => {
+       if (e.keyCode === 13){
+        event.preventDefault();
+        conferirPalpite();
+       }
+      });
+
 function configFimDeJogo() {
   campoPalpite.disabled = true;
   envioPalpite.disabled = true;
